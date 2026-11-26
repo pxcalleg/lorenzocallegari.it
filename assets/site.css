@@ -77,3 +77,11 @@ body{margin:0;background:#F5F0E6;color:#1E1C18;overflow-x:hidden}
 .lc .lc-privacy h2{margin-top:40px;font-size:clamp(1.25rem,3vw,1.5rem)}
 .lc .lc-privacy h2:first-child{margin-top:0}
 .lc .lc-legal a{font:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* Foto profilo in Chi sono (mobile first: sopra il testo, poi a fianco) */
+.lc .lc-chi{display:flex;flex-direction:column;gap:28px}
+.lc .lc-foto{display:block;width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid var(--lc-carta);box-shadow:0 0 0 2px var(--lc-blu)}
+@media (min-width:760px){
+  .lc .lc-chi{flex-direction:row-reverse;align-items:center;justify-content:space-between;gap:56px}
+  .lc .lc-foto{width:240px;height:240px;flex:none}
+}
