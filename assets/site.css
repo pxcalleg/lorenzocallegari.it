@@ -64,7 +64,8 @@ body{margin:0;background:#F5F0E6;color:#1E1C18;overflow-x:hidden}
 /* ---------- FOOTER ---------- */
 .lc .lc-foot{background:var(--lc-sabbia);box-shadow:0 0 0 100vmax var(--lc-sabbia);clip-path:inset(0 -100vmax);border-top:1px solid var(--lc-linea)}
 .lc .lc-foot-in{max-width:1180px;margin:0 auto;padding:44px 20px 32px;display:grid;gap:28px}
-.lc .lc-foot img{display:block;width:220px;height:auto}
+.lc .lc-foot .lc-brand .lc-mono-ico{width:40px;height:40px}
+.lc .lc-foot .lc-brand .lc-nome{height:22px;width:auto}
 .lc .lc-foot p{color:var(--lc-grigio);font-size:.95rem}
 .lc .lc-foot ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px}
 .lc .lc-foot a{font:500 .86rem var(--lc-mono);color:var(--lc-grigio);text-decoration:none}
