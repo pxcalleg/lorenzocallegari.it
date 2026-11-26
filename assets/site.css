@@ -117,3 +117,12 @@ body{margin:0;background:#F5F0E6;color:#1E1C18;overflow-x:hidden}
 /* Card in evidenza (progetto madre): occupa tutta la riga */
 .lc .lc-card-big{grid-column:1/-1;border-color:var(--lc-blu);border-width:1.5px}
 .lc .lc-card-big h3{font-size:1.5rem}
+
+/* Guida scaricabile (Local SEO) */
+.lc .lc-con-guida{margin-top:0}
+.lc .lc-guida{margin:0;max-width:340px}
+.lc .lc-guida img{display:block;width:100%;height:auto;border-radius:var(--lc-r);border:1px solid var(--lc-linea);box-shadow:0 10px 30px rgba(30,28,24,.12);transition:transform .15s}
+.lc .lc-guida a:hover img{transform:translateY(-3px)}
+.lc .lc-guida figcaption{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:18px}
+.lc .lc-guida figcaption .lc-e{margin:0;text-transform:none;letter-spacing:.02em}
+@media (min-width:900px){.lc .lc-guida{justify-self:end}}
