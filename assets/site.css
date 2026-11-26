@@ -113,3 +113,7 @@ body{margin:0;background:#F5F0E6;color:#1E1C18;overflow-x:hidden}
 .lc .lc-rivela[hidden],.lc .lc-tel[hidden]{display:none}
 .lc .lc-contatto a:focus{outline:none}
 .lc .lc-contatto a:focus-visible{outline:2px solid var(--lc-blu);outline-offset:3px;border-radius:3px}
+
+/* Card in evidenza (progetto madre): occupa tutta la riga */
+.lc .lc-card-big{grid-column:1/-1;border-color:var(--lc-blu);border-width:1.5px}
+.lc .lc-card-big h3{font-size:1.5rem}
