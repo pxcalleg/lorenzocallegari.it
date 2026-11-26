@@ -22,6 +22,8 @@
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/lc-global.css">
 <link rel="stylesheet" href="/assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/terminale.js" defer></script>
 </head>
 <body>
 <div class="lc">
@@ -54,7 +56,7 @@
     </div>
   </div>
   <div class="lc-card">
-    <div class="lc-contatto"><span class="lc-e lc-commento">telefono</span><a href="tel:+393477469301">+39 347 746 9301</a></div>
+    <div class="lc-contatto"><span class="lc-e lc-commento">telefono</span><a class="lc-tel" href="tel:+393477469301">+39 347 746 9301</a><button class="lc-rivela" type="button" hidden aria-label="Mostra il numero di telefono"><span class="lc-rivela-cmd">cat telefono.txt</span><kbd><span class="lc-k-desk">↵ Invio</span><span class="lc-k-touch">tocca qui</span></kbd></button></div>
     <div class="lc-contatto"><span class="lc-e lc-commento">whatsapp</span><a href="https://wa.me/393477469301" rel="noopener">Apri la chat ↗</a></div>
       <div class="lc-contatto"><span class="lc-e lc-commento">email</span><a href="mailto:lcallegari.silc@gmail.com">lcallegari.silc@gmail.com</a></div>
     <div class="lc-contatto"><span class="lc-e lc-commento">dove</span><strong>San Polo di Torrile (PR)</strong><span style="color:var(--lc-grigio)">In presenza tra Emilia-Romagna e Lombardia, da remoto in tutta Italia.</span></div>

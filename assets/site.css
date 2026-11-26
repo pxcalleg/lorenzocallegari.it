@@ -85,3 +85,31 @@ body{margin:0;background:#F5F0E6;color:#1E1C18;overflow-x:hidden}
   .lc .lc-chi{flex-direction:row-reverse;align-items:center;justify-content:space-between;gap:56px}
   .lc .lc-foto{width:200px;height:200px;flex:none}
 }
+
+/* Effetto terminale (assets/terminale.js): il contenuto dopo un'etichetta data-type
+   resta nascosto finche il comando non e stato "digitato". Senza JavaScript tutto e visibile;
+   se lo script non parte, dopo 3 secondi il contenuto compare comunque. */
+.js .lc [data-type] ~ *:not(.lc-on),
+.js .lc [data-type] ~ .lc-grid > *:not(.lc-on){opacity:0;transform:translateY(10px)}
+.js:not(.lc-term) .lc [data-type] ~ *:not(.lc-on),
+.js:not(.lc-term) .lc [data-type] ~ .lc-grid > *:not(.lc-on){animation:lc-failsafe .01s 3s forwards}
+.lc [data-type] ~ .lc-on,.lc [data-type] ~ .lc-grid > .lc-on{opacity:1;transform:none;transition:opacity .45s ease,transform .45s ease}
+@keyframes lc-failsafe{to{opacity:1;transform:none}}
+.lc .lc-e.lc-typing::after{content:"";display:inline-block;width:.55em;height:1em;margin-left:2px;vertical-align:-.15em;background:var(--lc-blu);animation:lc-blink .8s steps(1) infinite}
+.lc .lc-blu .lc-e.lc-typing::after{background:var(--lc-avorio)}
+@media (prefers-reduced-motion:reduce){.js .lc [data-type] ~ *,.js .lc [data-type] ~ .lc-grid > *{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
+
+/* Telefono da rivelare (pagina Contatti) */
+.lc .lc-rivela{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;margin:2px 0 0;padding:8px 0;min-height:44px;border:0;background:none;cursor:pointer;text-align:left;font:500 1rem/1.4 var(--lc-mono);color:var(--lc-inchiostro)}
+.lc .lc-rivela-cmd::before{content:"$ ";color:var(--lc-blu)}
+.lc .lc-rivela-cmd::after{content:"";display:inline-block;width:.55em;height:1em;margin-left:4px;vertical-align:-.15em;background:var(--lc-blu);animation:lc-blink 1s steps(1) infinite}
+.lc .lc-rivela kbd{display:inline-block;padding:4px 10px;border:1.5px solid var(--lc-blu);border-bottom-width:3px;border-radius:6px;background:var(--lc-carta);font:500 .8rem/1.2 var(--lc-mono);color:var(--lc-blu)}
+.lc .lc-rivela:hover kbd{background:var(--lc-blu-tenue)}
+.lc .lc-rivela:focus-visible{outline:2px solid var(--lc-blu);outline-offset:4px;border-radius:4px}
+.lc .lc-k-touch{display:none}
+@media (hover:none){.lc .lc-k-desk{display:none}.lc .lc-k-touch{display:inline}}
+.lc .lc-tel.lc-typing::after{content:"";display:inline-block;width:.5em;height:1em;margin-left:2px;vertical-align:-.15em;background:var(--lc-blu);animation:lc-blink .8s steps(1) infinite}
+@media (prefers-reduced-motion:reduce){.lc .lc-rivela-cmd::after{animation:none}}
+.lc .lc-rivela[hidden],.lc .lc-tel[hidden]{display:none}
+.lc .lc-contatto a:focus{outline:none}
+.lc .lc-contatto a:focus-visible{outline:2px solid var(--lc-blu);outline-offset:3px;border-radius:3px}
